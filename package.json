@@ -4,7 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite --open",
+=======
+    "dev": "vite",
+>>>>>>> 5c0e624d2269cceb557740b7f6dc0a5228956d85
     "build": "vite build --base=/additional-axios/",
     "preview": "vite preview"
   },
