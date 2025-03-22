@@ -24,23 +24,19 @@ export function renderGalleryList(images) {
         views,
         comments,
         downloads,
-      }) => `
-    <li class="gallery-item">
-	<a class="gallery-link" href="${largeImageURL}">
-		<img 
-		  class="gallery-image" 
-		  src="${webformatURL}" 
-		  alt="${tags}" 
-		/>
-        <div>
-        <p>Likes: ${likes}</p>
-        <p>Views: ${views}</p>
-        <p>Comments: ${comments}</p>
-        <p>Downloads: ${downloads}</p>
-    </div>
-	</a>
-    </li>   
-    `
+      }) => `<li class="gallery-item">
+        <a class="gallery-link" href="${largeImageURL}">
+          <div class="photo-card">
+            <img src="${webformatURL}" alt="${tags}" />
+            <div class="info">
+              <p><b>Likes:</b> ${likes}</p>
+              <p><b>Views:</b> ${views}</p>
+              <p><b>Comments:</b> ${comments}</p>
+              <p><b>Downloads:</b> ${downloads}</p>
+            </div>
+          </div>
+        </a>
+        </li>`
     )
     .join('');
   galleryListEl.insertAdjacentHTML('beforeend', markup);
